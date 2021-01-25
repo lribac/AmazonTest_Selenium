@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import pageObjects.*;
 import properties.ReadElementPropertyValues;
 
+import java.net.MalformedURLException;
+
 public class SiteLanguageTest {
 
     public WebDriver driver;
@@ -15,7 +17,7 @@ public class SiteLanguageTest {
     LanguageSettingsPage languageSettingsPage;
 
     @BeforeTest
-    public void initialize() {
+    public void initialize() throws MalformedURLException {
         Setup s=new Setup();
         driver = s.initializeDriver();
          s.hitUrl(prop.getProperty("url"));

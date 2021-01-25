@@ -16,12 +16,25 @@ services:
       - hub
     environment:
       - HUB_HOST=hub
-  amazon-test:
-    image: lucikaaa03/amazontest
-    depends_on: 
-      - chrome 
-      - firefox 
-    environment: 
-      - HUB_HOST=hub 
-      - BROWSER=chrome 
+  amazon-chrome:
+    image: lucikaaa03/amazontest1
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - HUB_HOST=hub
+      - BROWSER=chrome
       - MODULE=testngParallel.xml
+    volumes:
+      - ./chrome-results/amazontest-chrome:/usr/share/project/test-output
+  amazon-firefox:
+    image: lucikaaa03/amazontest1
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - HUB_HOST=hub
+      - BROWSER=firefox
+      - MODULE=testngParallel.xml
+    volumes:
+      - ./firefox-results/amazontest-firefox:/usr/share/project/test-output

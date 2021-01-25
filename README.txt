@@ -40,7 +40,14 @@ ex.(export PATH=$PATH:/User/username/Documents/Maven/apache-maven-3.5.2/bin)
 ________________________________________________________________________________________________________________________
 
 #Execution
-Run the following commands in terminal:
+Run the following commands in terminal from the project root directory:
 1. mvn clean
 2. mvn test -Dbrowser=chrome
 2.a if you can also run it  chromeHeadless, firefox, firefoxHeadless
+3. See test results either in terminal or open the index.html file created in the root directory.
+
+#Execution in docker containers
+1. Download and install Docker
+2. Run the following command in terminal from the project root directory:
+docker-compose up -d --scale chrome=2 --scale firefox=2
+3. See test results in 'chrome-results' and 'firefox-results' folders.

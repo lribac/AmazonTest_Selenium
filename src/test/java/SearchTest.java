@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import pageObjects.*;
 import properties.ReadElementPropertyValues;
 
+import java.net.MalformedURLException;
+
 public class SearchTest {
 
     public WebDriver driver;
@@ -18,7 +20,7 @@ public class SearchTest {
     int resultsCount;
 
     @BeforeTest
-    public void initialize() {
+    public void initialize() throws MalformedURLException {
         Setup s=new Setup();
         driver = s.initializeDriver();
         s.hitUrl(prop.getProperty("url"));
@@ -47,7 +49,7 @@ public class SearchTest {
         Assert.assertTrue(resultsCount > 0);
     }
 
-    @Test (dependsOnMethods={"searchForProduct"})
+    @Test (dependsOnMethods={"verifySearchResultsAreReturned"})
     public void verifyRelevantSearchResultsAreReturned() {
         System.out.println("verifyRelevantSearchResultsAreReturned with Thread Id:- "+ Thread.currentThread().getId());
 
