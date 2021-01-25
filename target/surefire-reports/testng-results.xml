@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-24T21:29:24 CST" name="Amazon Test" finished-at="2021-01-24T21:29:57 CST" duration-ms="32323">
+    <groups>
+    </groups>
+    <test started-at="2021-01-24T21:29:24 CST" name="Search a product" finished-at="2021-01-24T21:29:43 CST" duration-ms="18361">
+      <class name="SearchTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:SearchTest@7f3b84b8]" started-at="2021-01-24T21:29:24 CST" name="initialize" finished-at="2021-01-24T21:29:32 CST" duration-ms="7971" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="searchForProduct()[pri:0, instance:SearchTest@7f3b84b8]" started-at="2021-01-24T21:29:32 CST" name="searchForProduct" finished-at="2021-01-24T21:29:38 CST" duration-ms="5817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchForProduct -->
+        <test-method signature="verifySearchResultsAreReturned()[pri:0, instance:SearchTest@7f3b84b8]" started-at="2021-01-24T21:29:38 CST" name="verifySearchResultsAreReturned" finished-at="2021-01-24T21:29:43 CST" depends-on-methods="SearchTest.searchForProduct" duration-ms="4292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchResultsAreReturned -->
+        <test-method signature="verifyRelevantSearchResultsAreReturned()[pri:0, instance:SearchTest@7f3b84b8]" started-at="2021-01-24T21:29:43 CST" name="verifyRelevantSearchResultsAreReturned" finished-at="2021-01-24T21:29:43 CST" depends-on-methods="SearchTest.verifySearchResultsAreReturned" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRelevantSearchResultsAreReturned -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:SearchTest@7f3b84b8]" started-at="2021-01-24T21:29:43 CST" name="teardown" finished-at="2021-01-24T21:29:43 CST" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- SearchTest -->
+    </test> <!-- Search a product -->
+    <test started-at="2021-01-24T21:29:44 CST" name="Verify language site" finished-at="2021-01-24T21:29:57 CST" duration-ms="13088">
+      <class name="SiteLanguageTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:SiteLanguageTest@3023df74]" started-at="2021-01-24T21:29:44 CST" name="initialize" finished-at="2021-01-24T21:29:48 CST" duration-ms="4910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="verifySpanish()[pri:0, instance:SiteLanguageTest@3023df74]" started-at="2021-01-24T21:29:48 CST" name="verifySpanish" finished-at="2021-01-24T21:29:52 CST" duration-ms="3846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySpanish -->
+        <test-method signature="verifyEnglish()[pri:0, instance:SiteLanguageTest@3023df74]" started-at="2021-01-24T21:29:52 CST" name="verifyEnglish" finished-at="2021-01-24T21:29:56 CST" depends-on-methods="SiteLanguageTest.verifySpanish" duration-ms="4085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnglish -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:SiteLanguageTest@3023df74]" started-at="2021-01-24T21:29:56 CST" name="teardown" finished-at="2021-01-24T21:29:57 CST" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- SiteLanguageTest -->
+    </test> <!-- Verify language site -->
+  </suite> <!-- Amazon Test -->
+</testng-results>
